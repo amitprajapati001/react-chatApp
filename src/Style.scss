@@ -1,0 +1,207 @@
+
+.formConatiner{
+    background-color: rgb(0, 195, 255);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    
+
+
+
+    .formWrapper{
+    background-color: white;
+    padding: 40px 60px;
+    border-radius: 20px;
+    
+    
+    .form-header{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom: 30px;
+        gap: 10px;
+    }
+
+    form{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        border: none;
+    
+        input{
+            font-size: 15px;
+            font-weight: 500;
+            padding: 5px;
+            outline: none;
+            border: none;
+            border-bottom: 1px solid gray;
+     &:focus{
+           outline: none;
+        }
+        }
+        
+label{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 15px;
+    color: rgb(181, 208, 216);
+
+    img{
+        width: 40px;
+    }
+}
+
+    .form-footer{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 15px;
+    font-size: 15px;
+
+.register-btn{
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(172, 172, 211);
+    border:1px solid rgb(165, 165, 211);
+    border-radius: 7px;
+&:hover{
+    cursor: pointer;
+}
+}
+
+}
+}
+}
+}
+//  home-page
+
+.home-container{
+    background: rgb(95, 95, 114);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+
+    .container{
+        border: 1px solid white;
+        height:80%;
+        width:70%;
+        display: flex; 
+        border-radius: 10px;
+        overflow: hidden;
+
+        .sidebar{
+            background-color: rgb(150, 150, 240);
+            flex:1;
+
+            .navbar{
+                display: flex;
+                align-items: center;
+                background: #516b94;
+                color:white;
+                justify-content: space-between;
+                height: 40px;
+                padding: 10px;
+                
+            
+                img{
+                    width:32px; 
+                    height: 32px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                    cursor: pointer;
+
+                   
+                     
+
+                }
+
+                .logo{
+                    font-weight:700;
+                }
+                span{
+                    font-weight: 700;
+                }
+                .signedUser{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap:10px;
+                }
+
+                button{
+                    border: none;
+                    font-size: 12px;
+                    border-radius: 5px;
+                    padding: 5px;
+                    background-color: #1d3152;
+                    color: white;
+                }
+            }
+
+            .search{
+            
+                display: flex;
+                flex-direction: column;
+                border-bottom:1px solid gray;
+
+             input{
+                border: none;
+                outline: none;
+                padding: 5px;
+                border-radius: 10px;
+                background: transparent;
+                overflow: hidden;
+
+                &::placeholder{
+                    color: #393c41;
+                }
+             }
+             
+            }
+
+            .user{
+                display: flex;
+                padding: 5px;
+                
+                align-items: center;
+
+                &:hover{
+                    background-color: #38568b;
+                }
+
+                img{
+                    height: 42px;
+                    width: 42px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                }
+
+                .user-details{
+                    
+                    align-items: center;
+                    padding: 10px;
+                    font-weight: 500;
+                    gap: 10px;
+                    margin-top: 10px;
+                    width: 100%;
+                    font-size: 15px;
+                    color: white;
+
+                }
+            }   
+               
+        }
+      
+        .chat{
+            flex:2;
+        }
+    }
+ 
+}
