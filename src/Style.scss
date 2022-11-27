@@ -154,7 +154,7 @@ label{
              input{
                 border: none;
                 outline: none;
-                padding: 5px;
+                padding: 10px;
                 border-radius: 10px;
                 background: transparent;
                 overflow: hidden;
@@ -191,8 +191,16 @@ label{
                     gap: 10px;
                     margin-top: 10px;
                     width: 100%;
-                    font-size: 15px;
+                    
                     color: white;
+
+                    span{
+                        font-size: 15px;
+                    }
+
+                    p{
+                        font-size: 12px;
+                    }
 
                 }
             }   
@@ -201,6 +209,118 @@ label{
       
         .chat{
             flex:2;
+
+            .chat-info{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                height:40px;
+                background-color: #38568b;
+                padding: 10px;
+
+                span{
+                    font-weight: 700;
+                    color: white;
+                }
+
+                .chat-icons{
+                    display: flex;
+                    gap:10px;
+
+                    img{
+                        height: 28px;
+                        cursor:pointer;
+                    }
+                }
+            }
+
+            .messages{
+                background-color: rgb(213, 213, 226);
+                overflow:auto;
+                height: calc(100% - 150px);
+
+               .message{
+                display: flex;
+                gap: 10px;
+
+               
+                .message-info{
+                    display: flex;
+                    flex-direction: column;
+                    color: rgb(99, 99, 128);
+                    font-weight: 500;
+                    font-size: 14px;
+                    margin-bottom: 10px;
+                    img{
+                        height: 40px;
+                        width: 40px;
+                        border-radius: 50%;
+                        object-fit: cover;
+                    }
+               }
+               .message-content{
+                max-width: 70%;
+                display: flex;
+                gap: 10px;
+                flex-direction: column;
+
+                p{
+                    background-color: white;
+                    padding: 10px 20px;
+                    border-radius: 0px 10px 10px 10px;
+                   }
+               }
+               &.user{
+                flex-direction:row-reverse ;
+                
+                p{
+                    background-color: #516b94;
+                    
+                    border-radius: 10px 0px 10px 10px;
+                }
+                }
+            }
+               
+            }
+          
+            
+
+          
+        }
+        .input{
+            background-color: white;
+            height: 50px;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+
+            input{
+                width: 100%;
+                font-size: 18px;
+                border: none;
+                outline: none;
+                color:#1d3152
+            }
+
+            .send-icons{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                 gap: 10px;
+
+                 img{
+                    height: 28px;
+                    cursor: pointer;
+                 }
+
+                 button{
+                    padding: 10px 15px;
+                    background-color: #516b94;
+                    border: none;
+                 }
+            }
         }
     }
  
