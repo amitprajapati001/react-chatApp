@@ -1,3 +1,15 @@
+@mixin mobile{
+    @media screen and (max-width:480px) {
+        @content
+    }
+}
+
+@mixin tablet {
+    @media screen and (max-width:768px) {
+        @content
+    }
+}
+
 
 .formConatiner{
     background-color: rgb(0, 195, 255);
@@ -95,10 +107,18 @@ label{
         display: flex; 
         border-radius: 10px;
         overflow: hidden;
+        @include tablet{
+            width: 90%;
+        }
 
         .sidebar{
             background-color: rgb(150, 150, 240);
             flex:1;
+            position: relative;
+            @include tablet{
+                width: 10%;
+            }
+    
 
             .navbar{
                 display: flex;
@@ -124,6 +144,9 @@ label{
 
                 .logo{
                     font-weight:700;
+                    @include tablet{
+                        display: none;
+                    }
                 }
                 span{
                     font-weight: 700;
@@ -142,6 +165,11 @@ label{
                     padding: 5px;
                     background-color: #1d3152;
                     color: white;
+                    @include tablet{
+                        position: absolute;
+                        bottom: 10px;
+                    }
+            
                 }
             }
 
@@ -268,16 +296,25 @@ label{
                     background-color: white;
                     padding: 10px 20px;
                     border-radius: 0px 10px 10px 10px;
+                    max-width: max-content;
+                   }
+
+                   img{
+                    width: 40%;
                    }
                }
                &.user{
                 flex-direction:row-reverse ;
-                
+
+                .message-content{
+                    align-items: flex-end;
+                    
                 p{
                     background-color: #516b94;
-                    
                     border-radius: 10px 0px 10px 10px;
+                    margin-top: 10px;
                 }
+            }
                 }
             }
                
@@ -295,6 +332,9 @@ label{
             align-items: center;
             justify-content: space-between;
             gap: 10px;
+            @include tablet{
+                gap: 5px;
+            }
 
             input{
                 width: 100%;
@@ -302,6 +342,7 @@ label{
                 border: none;
                 outline: none;
                 color:#1d3152
+
             }
 
             .send-icons{
@@ -313,12 +354,21 @@ label{
                  img{
                     height: 28px;
                     cursor: pointer;
+
+                    @include tablet{
+                        height: 15px;
+                        
+                    }
                  }
 
                  button{
                     padding: 10px 15px;
                     background-color: #516b94;
                     border: none;
+                    @include tablet{
+                        
+                        padding: 5px 10px;
+                    }
                  }
             }
         }
